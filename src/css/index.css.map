@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,UAAU;EACtB,OAAO,EAAE,CAAC;CACX;;AACD,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,CAAC;EACT,WAAW,EAAE,mJAED;EACZ,sBAAsB,EAAE,WAAW;EACnC,uBAAuB,EAAE,SAAS;CACnC;;ACZH,AAAA,gBAAgB,CAAA;EACZ,MAAM,EAAC,IAAI;EACX,gBAAgB,EAAE,MAAM;CAC3B",
+    "sources": [
+        "index.scss",
+        "_global.scss",
+        "components/_landingPage.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}
