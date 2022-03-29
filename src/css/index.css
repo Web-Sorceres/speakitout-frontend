@@ -12,8 +12,61 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.landing__header {
-  height: 10vh;
-  background-color: orange;
+.landing-navbar {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.landing-navbar .logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  background: linear-gradient(90.57deg, #EEC800 3.34%, #F58925 77.65%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.landing-navbar .landing-menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.landing-navbar ul li {
+  list-style-type: none;
+}
+
+.landing-navbar ul button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#EEC800), to(#F58925));
+  background: linear-gradient(180deg, #EEC800 0%, #F58925 100%);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.4rem 2rem;
+  border-radius: 72px;
+  outline: none;
+  border: none;
 }
 /*# sourceMappingURL=index.css.map */

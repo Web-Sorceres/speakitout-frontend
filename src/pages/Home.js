@@ -1,12 +1,10 @@
 import React from 'react';
+import LandingNavbar from '../components/LandingNavbar';
 
 function Home(props) {
     return (
         <div>
-        <div className="landing__header">
-            
-        </div>
-            This is Home
+            <LandingNavbar />
         </div>
     );
 }
