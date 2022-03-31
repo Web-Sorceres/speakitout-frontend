@@ -38,3 +38,192 @@
         }
     }
 }
+.landing-header {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+    padding: 5rem 0;
+    &::before {
+        position: absolute;
+        content: " ";
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: calc(100% + 10vw);
+        height: 100%;
+        background-image: url("/public/assets/landingheaderbg.png");
+        background-position: top right;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .landing-header-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .landing-header-left-desc {
+        max-width: 70%;
+    }
+    .secracy {
+        background: linear-gradient(90deg, #F58925 8.1%, #D96D09 65.11%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    .landing-header-right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        img {
+            width: 50%;
+            // transform: scale(1.2);
+        }
+    }
+    .landing-header-left-button {
+        button {
+            background: linear-gradient(90deg, #EEC800 0%, #F58925 100%);
+            border-radius: 32px;        
+            color: #fff;
+            font-size: 1.3rem;
+            padding: 0.5rem 4rem;
+            width: fit-content;
+            text-transform: uppercase;
+            outline: none;
+            border: none;
+        }
+    }
+}
+.landing-features-container {
+    background-color: #f4f4f4;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    .landing-features-heading, .landing-features {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .landing-features-heading {
+        text-align: center;
+        h1 {
+            font-size: 2rem;
+            letter-spacing: 0.07em;
+            background: linear-gradient(90deg, #F58925 20.59%, #FAA14E 80.15%);
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    .landing-features {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .landing-feature {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.05), 0px 0px 4px 1px rgba(0, 0, 0, 0.05), 0px 0px 4px 1px rgba(0, 0, 0, 0.05);
+        padding: 4.5rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        border-radius: 12px;
+        color: #0E0E0E;
+    }
+    .landing-feature-logo {
+        text-align: center;
+        .landing-feature-logo-img {
+            font-size: 64px;
+            color: #FAA14E;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+    .landing-feature-desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            text-align: center;
+        }
+        button {
+            background: linear-gradient(89.92deg, #EEC800 5.56%, #F58925 97.18%);
+            border-radius: 21px;
+            padding: 0.6rem 1.8rem;
+            color: #fff;
+            font-size: 1rem;
+            border: none;
+            outline: none;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+}
+.landing-newsletter {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, #EEC800 0%, #F58925 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    .landing-newsletter-heading {
+        color: #fff;
+        h2 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+    .landing-newsletter-form {
+        width: 70%;
+        margin: 0 auto;
+        border: 1px solid #FFFFFF;
+        border-radius: 61px;
+        padding: 0.2rem;
+        display: flex;
+        justify-content: space-between;
+        input {
+            padding: 2ch;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            flex: 75%;
+        }
+        button {
+            background: #FFFFFF;
+            border-radius: 24.5px;
+            border: none;
+            outline: none;
+            padding: 0.6rem 1.8rem;
+            text-transform: uppercase;
+        }
+    }
+}
