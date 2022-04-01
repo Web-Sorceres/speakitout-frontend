@@ -87,7 +87,6 @@
 
         img {
             width: 50%;
-            // transform: scale(1.2);
         }
     }
     .landing-header-left-button {
@@ -126,6 +125,7 @@
             -webkit-background-clip: text;
             background-clip: text;
             text-transform: uppercase;
+            margin-bottom: 1rem;
         }
         p {
             font-size: 1.2rem;
@@ -216,6 +216,9 @@
             outline: none;
             color: #fff;
             flex: 75%;
+            &::placeholder {
+                color: #fff;
+            }
         }
         button {
             background: #FFFFFF;
@@ -224,6 +227,67 @@
             outline: none;
             padding: 0.6rem 1.8rem;
             text-transform: uppercase;
+        }
+    }
+}
+.landing-about {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+        font-size: 2rem;
+        letter-spacing: 0.07em;
+        background: linear-gradient(90deg, #F58925 20.59%, #FAA14E 80.15%);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .landing-about-container {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4rem;
+        .landing-about-left {
+            position: relative;
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            padding: 2rem 0;
+            padding-left: 5rem;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: calc(-10vw);
+                width: 90%;
+                height: 90%;
+                background: linear-gradient(180deg, #EEC800 0%, #F58925 100%);
+                border-radius: 50%;
+                transform: rotate(-0.14deg) translateX(-15%);
+            }
+            img {
+                width: 60%;
+                filter: drop-shadow(0px 12px 4px rgba(0, 0, 0, 0.25));
+            }
+        }
+        .landing-about-right {
+            flex: 1;
+            h3 {
+                font-size: 1.5rem;
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: 2rem;
+                color: rgba(44, 44, 44, 0.6);
+            }
+            p {
+                text-align: left;
+            }
         }
     }
 }

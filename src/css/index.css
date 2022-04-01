@@ -204,6 +204,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .landing-features-container .landing-features-heading p {
@@ -348,6 +349,22 @@ body {
           flex: 75%;
 }
 
+.landing-newsletter .landing-newsletter-form input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.landing-newsletter .landing-newsletter-form input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.landing-newsletter .landing-newsletter-form input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.landing-newsletter .landing-newsletter-form input::placeholder {
+  color: #fff;
+}
+
 .landing-newsletter .landing-newsletter-form button {
   background: #FFFFFF;
   border-radius: 24.5px;
@@ -355,5 +372,104 @@ body {
   outline: none;
   padding: 0.6rem 1.8rem;
   text-transform: uppercase;
+}
+
+.landing-about {
+  padding: 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landing-about h2 {
+  font-size: 2rem;
+  letter-spacing: 0.07em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20.59%, #F58925), color-stop(80.15%, #FAA14E));
+  background: linear-gradient(90deg, #F58925 20.59%, #FAA14E 80.15%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.landing-about .landing-about-container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4rem;
+}
+
+.landing-about .landing-about-container .landing-about-left {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 2rem 0;
+  padding-left: 5rem;
+}
+
+.landing-about .landing-about-container .landing-about-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(-10vw);
+  width: 90%;
+  height: 90%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EEC800), to(#F58925));
+  background: linear-gradient(180deg, #EEC800 0%, #F58925 100%);
+  border-radius: 50%;
+  -webkit-transform: rotate(-0.14deg) translateX(-15%);
+          transform: rotate(-0.14deg) translateX(-15%);
+}
+
+.landing-about .landing-about-container .landing-about-left img {
+  width: 60%;
+  -webkit-filter: drop-shadow(0px 12px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 12px 4px rgba(0, 0, 0, 0.25));
+}
+
+.landing-about .landing-about-container .landing-about-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.landing-about .landing-about-container .landing-about-right h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: rgba(44, 44, 44, 0.6);
+}
+
+.landing-about .landing-about-container .landing-about-right p {
+  text-align: left;
 }
 /*# sourceMappingURL=index.css.map */

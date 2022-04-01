@@ -24,6 +24,18 @@ function Home(props) {
                 </div>
             </div>
             <LandingFeatures />
+            <div className="landing-about">
+                <h2>About</h2>
+                <div className="landing-about-container">
+                    <div className="landing-about-left">
+                        <img src="assets/phoneabout.png" alt="" />
+                    </div>
+                    <div className="landing-about-right">
+                        <h3>About our app</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda officiis non ex architecto necessitatibus consectetur ea debitis, harum, quae neque quibusdam eum, maiores culpa reprehenderit cupiditate quis saepe accusantium magnam dolorem quisquam error aut. Nostrum at illum natus, assumenda voluptatem illo odio culpa doloremque molestiae odit deleniti dolore perferendis dolorem. Obcaecati ab maiores cumque, non quas voluptatibus iusto earum deserunt?<br /> <br /> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque perferendis molestias cum, asperiores cumque nostrum blanditiis velit necessitatibus tempore aperiam.</p>
+                    </div>
+                </div>
+            </div>
             <div className="landing-newsletter">
                 <div className="landing-newsletter-heading">
                     <h2>Subscribe to our newsletter</h2>
@@ -31,7 +43,7 @@ function Home(props) {
                 </div>
                 <div>
                     <form action="" className='landing-newsletter-form'>
-                        <input type= "email" placeholder='Enter your email' required />
+                        <input type="email" placeholder='Enter your email' required />
                         <button type="submit">Subscribe</button>
                     </form>
                 </div>
