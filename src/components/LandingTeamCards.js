@@ -12,13 +12,13 @@ const LandingTeamCards = ({ ...props }) => {
                     <p>{props.role}</p>
                 </div>
                 <div className="team-card-socials">
-                    <a href= "" target={"_blank"}>
+                    <a href= {props.fb} target={"_blank"} rel = "noreferrer">
                         <FacebookOutlined className="team-socials-logo"/>
                     </a>
-                    <a href="" target={"_blank"}>
+                    <a href= {props.insta} target={"_blank"} rel = "noreferrer">
                         <Instagram className="team-socials-logo"/>
                     </a>
-                    <a href="" target={"_blank"}>
+                    <a href= {props.github} target={"_blank"} rel = "noreferrer">
                         <GitHub className="team-socials-logo"/>
                     </a>
                 </div>
