@@ -3,6 +3,7 @@ import LandingNavbar from '../components/LandingNavbar';
 import LandingFeatures from '../components/LandingFeatures';
 import LandingTeamCards from '../components/LandingTeamCards'
 import team from '../data/teaminfo';
+import LandingFooter from '../css/components/LandingFooter';
 
 function Home(props) {
     return (
@@ -63,8 +64,8 @@ function Home(props) {
                     )}
                 </div>
             </div>
+            <LandingFooter />
         </div>
-
     );
 }
 
