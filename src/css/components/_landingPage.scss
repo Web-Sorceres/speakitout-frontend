@@ -202,7 +202,7 @@
         }
     }
     .landing-newsletter-form {
-        width: 70%;
+        width: 50%;
         margin: 0 auto;
         border: 1px solid #FFFFFF;
         border-radius: 61px;
@@ -287,6 +287,86 @@
             }
             p {
                 text-align: left;
+            }
+        }
+    }
+}
+.team-card-wrapper {
+    background-color: #f4f4f4;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    .team-card-heading {
+        font-size: 2rem;
+        letter-spacing: 0.07em;
+        background: linear-gradient(90deg, #F58925 20.59%, #FAA14E 80.15%);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .team-card {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .team-card-container {
+        flex: 1;
+        padding: 3rem 4rem;
+        background: #FFFFFF;
+        border-radius: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .team-card-desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            background: linear-gradient(89.98deg, #F58925 1.1%, #E8B501 98.9%);
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+    }
+    .team-card-socials {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        a {
+            all: unset;
+            color: #F58925;
+        }
+        .team-socials-logo {
+            font-size: 2.2rem;
+            &:hover {
+                transform: scale(1.5);
+                box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
             }
         }
     }

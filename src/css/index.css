@@ -325,7 +325,7 @@ body {
 }
 
 .landing-newsletter .landing-newsletter-form {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
   border: 1px solid #FFFFFF;
   border-radius: 61px;
@@ -471,5 +471,132 @@ body {
 
 .landing-about .landing-about-container .landing-about-right p {
   text-align: left;
+}
+
+.team-card-wrapper {
+  background-color: #f4f4f4;
+  padding: 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+}
+
+.team-card-wrapper .team-card-heading {
+  font-size: 2rem;
+  letter-spacing: 0.07em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20.59%, #F58925), color-stop(80.15%, #FAA14E));
+  background: linear-gradient(90deg, #F58925 20.59%, #FAA14E 80.15%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.team-card-wrapper .team-card {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
+}
+
+.team-card-wrapper .team-card-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 3rem 4rem;
+  background: #FFFFFF;
+  border-radius: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.team-card-wrapper .team-card-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.team-card-wrapper .team-card-desc img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.team-card-wrapper .team-card-desc h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.team-card-wrapper .team-card-desc p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: linear-gradient(89.98deg, #F58925 1.1%, #E8B501 98.9%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.team-card-wrapper .team-card-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.team-card-wrapper .team-card-socials a {
+  all: unset;
+  color: #F58925;
+}
+
+.team-card-wrapper .team-card-socials .team-socials-logo {
+  font-size: 2.2rem;
+}
+
+.team-card-wrapper .team-card-socials .team-socials-logo:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 /*# sourceMappingURL=index.css.map */

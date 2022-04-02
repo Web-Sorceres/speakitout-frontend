@@ -1,6 +1,8 @@
 import React from 'react';
 import LandingNavbar from '../components/LandingNavbar';
 import LandingFeatures from '../components/LandingFeatures';
+import LandingTeamCards from '../components/LandingTeamCards'
+import team from '../data/teaminfo';
 
 function Home(props) {
     return (
@@ -41,14 +43,28 @@ function Home(props) {
                     <h2>Subscribe to our newsletter</h2>
                     <p>Never miss any exciting updates and news(maal masala).</p>
                 </div>
-                <div>
-                    <form action="" className='landing-newsletter-form'>
-                        <input type="email" placeholder='Enter your email' required />
-                        <button type="submit">Subscribe</button>
-                    </form>
+                <form action="" className='landing-newsletter-form'>
+                    <input type="email" placeholder='Enter your email' required />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div className="team-card-wrapper">
+                <h2 className='team-card-heading'>Our Team</h2>
+                <div className="team-card">
+                    {team.map((item, index) =>
+                        <LandingTeamCards
+                            key={index + 1}
+                            name={item.name}
+                            role={item.role}
+                            fb={item.facebook}
+                            insta={item.instagram}
+                            github={item.github}
+                        />
+                    )}
                 </div>
             </div>
         </div>
+
     );
 }
 
