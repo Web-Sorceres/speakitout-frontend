@@ -1,9 +1,52 @@
+@mixin respond($breakpoint) {
+    @if($breakpoint == medium) {
+      @media screen and (max-width: 1050px) {
+        @content
+      }
+    }
+    @if ($breakpoint == small) {
+      @media screen and (max-width: 650px) {
+        @content
+      }
+    }
+}
+@keyframes slide-nav {
+    0% {
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-nav-item {
+    0% {
+      transform: translateX(150%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 0.8;
+    }
+  }
+  
+  @mixin navItemAnimation($delay) {
+    animation: slide-nav-item 0.3s linear both;
+    animation-delay: $delay;
+  }
+  @mixin navAnimation($dur) {
+    animation: slide-nav $dur cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 .landing-navbar {
     width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
+    @include respond(small) {
+        display: none;
+    }
     .logo {
         flex: 1;
         font-size: 1.5rem;
@@ -36,6 +79,75 @@
             outline: none;
             border: none;
         }
+    }
+}
+.landingNavSmall {
+    display: none;
+    @include respond(small) {
+      display: flex;
+      justify-content: flex-end;
+      padding: 8px 12px;
+    }
+    .landingNavHam {
+      font-size: 27px;
+      font-weight: bold;
+    //   color: $primary-white;
+      cursor: pointer;
+      z-index: 6;
+    }
+    .landingNavSmallOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+    //   background-color: $primary-blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 5;
+      @include navAnimation(.5s);
+      .navMenuItemsSmall {
+        list-style: none;
+        text-align: center;
+        padding-inline-start: 0;
+        .navmenuItemSmallOne {
+          @include navItemAnimation(0.2s);
+        }
+        .navmenuItemSmallTwo {
+          @include navItemAnimation(0.3s);
+        }
+        .navmenuItemSmallThree {
+          @include navItemAnimation(0.4s);
+        }
+        .navmenuItemSmallFour {
+          @include navItemAnimation(0.5s);
+        }
+        .navmenuItemSmallFive {
+          @include navItemAnimation(0.6s);
+        }
+        .navmenuItemSmallSix {
+          @include navItemAnimation(0.7s);
+        }
+        li {
+          margin: 2.5rem;
+          font-size: 1.5rem;
+          text-align: center;
+          cursor: pointer;
+          a {
+            // color: $primary-white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 0.4rem;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              border-bottom: 2px solid white;
+            }
+          }
+        }
+      }
     }
 }
 .landing-header {

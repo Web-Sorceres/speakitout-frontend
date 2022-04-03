@@ -1,7 +1,7 @@
 const team = [
     {
         name : "Abid Adhikari",
-        role : "Fullstack Boka",
+        role : "Fullstack Developer",
         facebook: "https://www.facebook.com/abid.adhikari",
         instagram: "https://www.instagram.com/abid.adhikari/",
         github: "https://github.com/abidadhikari"
