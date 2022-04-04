@@ -47,6 +47,10 @@
     @include respond(small) {
         display: none;
     }
+    @include respond(medium) {
+        width: 90%;
+        padding: 10px 0;
+    }
     .logo {
         flex: 1;
         font-size: 1.5rem;
@@ -63,6 +67,9 @@
         justify-content: center;
         align-items: center;
         gap: 2rem;
+        @include respond(medium) {
+            gap: 1rem;
+        }
     }
     ul {
         li {
@@ -78,6 +85,10 @@
             border-radius: 72px;
             outline: none;
             border: none;
+            @include respond(medium) {
+                padding: 0.3rem 1.5rem;
+                width: max-content;
+            }
         }
     }
 }
@@ -93,7 +104,7 @@
       font-weight: bold;
       color: #E8B501;
       cursor: pointer;
-      z-index: 6;
+      z-index: 10;
     }
     .landingNavSmallOverlay {
       position: fixed;
@@ -162,6 +173,10 @@
     position: relative;
     margin: 0 auto;
     padding: 5rem 0;
+    @include respond(medium) {
+        width: 90%;
+    }
+    overflow: hidden;
     &::before {
         position: absolute;
         content: " ";
@@ -174,6 +189,14 @@
         background-position: top right;
         background-size: contain;
         background-repeat: no-repeat;
+        @include respond(medium) {
+            background-image: linear-gradient(90deg, #F58925 20.59%, #FAA14E 80.15%);
+            width: 50%;
+            height: 80%;
+            left: 70%;
+            border-radius: 50%;
+            transform: rotate(-100deg);
+        }
     }
     .landing-header-left {
         flex: 1;
@@ -189,6 +212,9 @@
     }
     .landing-header-left-desc {
         max-width: 70%;
+        @include respond(medium) {
+            max-width: 80%;
+        }
     }
     .secracy {
         background: linear-gradient(90deg, #F58925 8.1%, #D96D09 65.11%);
@@ -203,7 +229,10 @@
         align-items: flex-end;
 
         img {
-            width: 50%;
+            width: 60%;
+            @include respond(medium) {
+                width: 70%;
+            }
         }
     }
     .landing-header-left-button {
@@ -253,6 +282,9 @@
         justify-content: center;
         align-items: center;
         gap: 2rem;
+        @include respond(medium) {
+            flex-direction: column;
+        }
     }
     .landing-feature {
         background: #FFFFFF;
@@ -265,6 +297,9 @@
         gap: 2rem;
         border-radius: 12px;
         color: #0E0E0E;
+        @include respond(medium) {
+            width: 100%;
+        }
     }
     .landing-feature-logo {
         text-align: center;
@@ -353,6 +388,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
     h2 {
         font-size: 2rem;
         letter-spacing: 0.07em;
@@ -369,6 +405,9 @@
         justify-content: space-between;
         align-items: center;
         gap: 4rem;
+        @include respond(medium) {
+            flex-direction: column;
+        }
         .landing-about-left {
             position: relative;
             flex: 1;
@@ -431,6 +470,9 @@
         display: flex;
         justify-content: space-between;
         gap: 2rem;
+        @include respond(medium) {
+            flex-direction: column;
+        }
     }
     .team-card-container {
         flex: 1;

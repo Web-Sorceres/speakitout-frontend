@@ -5,13 +5,11 @@ import CloseIcon from "@mui/icons-material/Close";
 const LandingNavbar = () => {
     const [hamMenu, setHamMenu] = useState(false);
     const handleHamMenu = () => {
+        !hamMenu ? document.body.style.overflowY = "hidden" : document.body.style.overflowY = "visible"
         setHamMenu((prevState) => {
             return !prevState;
         });
     };
-    useEffect(() => {
-        hamMenu ? document.body.style.overflowY = "hidden" : document.body.style.overflowY = "visible"
-    }, [hamMenu])
     return (
         <>
             <div className="landing-navbar">

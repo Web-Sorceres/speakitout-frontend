@@ -83,6 +83,13 @@ body {
   }
 }
 
+@media screen and (max-width: 1050px) {
+  .landing-navbar {
+    width: 90%;
+    padding: 10px 0;
+  }
+}
+
 .landing-navbar .logo {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -112,6 +119,12 @@ body {
   gap: 2rem;
 }
 
+@media screen and (max-width: 1050px) {
+  .landing-navbar .landing-menu-items {
+    gap: 1rem;
+  }
+}
+
 .landing-navbar ul li {
   list-style-type: none;
 }
@@ -127,6 +140,15 @@ body {
   border-radius: 72px;
   outline: none;
   border: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .landing-navbar ul button {
+    padding: 0.3rem 1.5rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
 }
 
 .landingNavSmall {
@@ -150,7 +172,7 @@ body {
   font-weight: bold;
   color: #E8B501;
   cursor: pointer;
-  z-index: 6;
+  z-index: 10;
 }
 
 .landingNavSmall .landingNavSmallOverlay {
@@ -265,6 +287,13 @@ body {
   position: relative;
   margin: 0 auto;
   padding: 5rem 0;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1050px) {
+  .landing-header {
+    width: 90%;
+  }
 }
 
 .landing-header::before {
@@ -279,6 +308,19 @@ body {
   background-position: top right;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1050px) {
+  .landing-header::before {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(20.59%, #F58925), color-stop(80.15%, #FAA14E));
+    background-image: linear-gradient(90deg, #F58925 20.59%, #FAA14E 80.15%);
+    width: 50%;
+    height: 80%;
+    left: 70%;
+    border-radius: 50%;
+    -webkit-transform: rotate(-100deg);
+            transform: rotate(-100deg);
+  }
 }
 
 .landing-header .landing-header-left {
@@ -308,6 +350,12 @@ body {
   max-width: 70%;
 }
 
+@media screen and (max-width: 1050px) {
+  .landing-header .landing-header-left-desc {
+    max-width: 80%;
+  }
+}
+
 .landing-header .secracy {
   background: -webkit-gradient(linear, left top, right top, color-stop(8.1%, #F58925), color-stop(65.11%, #D96D09));
   background: linear-gradient(90deg, #F58925 8.1%, #D96D09 65.11%);
@@ -332,7 +380,13 @@ body {
 }
 
 .landing-header .landing-header-right img {
-  width: 50%;
+  width: 60%;
+}
+
+@media screen and (max-width: 1050px) {
+  .landing-header .landing-header-right img {
+    width: 70%;
+  }
 }
 
 .landing-header .landing-header-left-button button {
@@ -407,6 +461,15 @@ body {
   gap: 2rem;
 }
 
+@media screen and (max-width: 1050px) {
+  .landing-features-container .landing-features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .landing-features-container .landing-feature {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.05), 0px 0px 4px 1px rgba(0, 0, 0, 0.05), 0px 0px 4px 1px rgba(0, 0, 0, 0.05);
@@ -428,6 +491,12 @@ body {
   gap: 2rem;
   border-radius: 12px;
   color: #0E0E0E;
+}
+
+@media screen and (max-width: 1050px) {
+  .landing-features-container .landing-feature {
+    width: 100%;
+  }
 }
 
 .landing-features-container .landing-feature-logo {
@@ -572,6 +641,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 2rem;
 }
 
 .landing-about h2 {
@@ -598,6 +668,15 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 4rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .landing-about .landing-about-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .landing-about .landing-about-container .landing-about-left {
@@ -696,6 +775,15 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 2rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .team-card-wrapper .team-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .team-card-wrapper .team-card-container {
