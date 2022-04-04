@@ -12,11 +12,11 @@
 }
 @keyframes slide-nav {
     0% {
-      transform: translateY(-50%);
+      transform: translateX(-50%);
       opacity: 0;
     }
     100% {
-      transform: translateY(0);
+      transform: translateX(0);
       opacity: 1;
     }
   }
@@ -91,7 +91,7 @@
     .landingNavHam {
       font-size: 27px;
       font-weight: bold;
-    //   color: $primary-white;
+      color: #E8B501;
       cursor: pointer;
       z-index: 6;
     }
@@ -101,34 +101,34 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-    //   background-color: $primary-blue;
+      background-color: whitesmoke;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       z-index: 5;
-      @include navAnimation(.5s);
+      @include navAnimation(.7s);
       .navMenuItemsSmall {
         list-style: none;
         text-align: center;
         padding-inline-start: 0;
         .navmenuItemSmallOne {
-          @include navItemAnimation(0.2s);
-        }
-        .navmenuItemSmallTwo {
           @include navItemAnimation(0.3s);
         }
+        .navmenuItemSmallTwo {
+          @include navItemAnimation(0.45s);
+        }
         .navmenuItemSmallThree {
-          @include navItemAnimation(0.4s);
+          @include navItemAnimation(0.60s);
         }
         .navmenuItemSmallFour {
-          @include navItemAnimation(0.5s);
+          @include navItemAnimation(0.75s);
         }
         .navmenuItemSmallFive {
-          @include navItemAnimation(0.6s);
+          @include navItemAnimation(0.9s);
         }
         .navmenuItemSmallSix {
-          @include navItemAnimation(0.7s);
+          @include navItemAnimation(1.05s);
         }
         li {
           margin: 2.5rem;
@@ -136,11 +136,16 @@
           text-align: center;
           cursor: pointer;
           a {
-            // color: $primary-white;
             text-decoration: none;
             font-weight: bold;
             text-transform: uppercase;
             padding: 0.4rem;
+            background: linear-gradient(90deg, #F58925 20.59%, #FAA14E 80.15%);
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-transform: uppercase;
+            text-align: center;
             transition: all 0.2s ease-in-out;
             &:hover {
               border-bottom: 2px solid white;

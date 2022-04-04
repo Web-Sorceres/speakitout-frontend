@@ -1,15 +1,17 @@
-import {React, useState} from "react";
+import {React, useEffect, useState} from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 const LandingNavbar = () => {
     const [hamMenu, setHamMenu] = useState(false);
     const handleHamMenu = () => {
-        !hamMenu ? document.body.style.overflowY = "hidden" : document.body.style.overflowY = "visible"
         setHamMenu((prevState) => {
             return !prevState;
         });
     };
+    useEffect(() => {
+        hamMenu ? document.body.style.overflowY = "hidden" : document.body.style.overflowY = "visible"
+    }, [hamMenu])
     return (
         <>
             <div className="landing-navbar">
@@ -38,16 +40,16 @@ const LandingNavbar = () => {
                                         <a href="/">Home</a>
                                     </li>
                                     <li className="navmenuItemSmallTwo">
-                                        <a href="/">About</a>
+                                        <a href="/">Features</a>
                                     </li>
                                     <li className="navmenuItemSmallThree">
-                                        <a href="/">Privacy Policy</a>
+                                        <a href="/">About</a>
                                     </li>
                                     <li className="navmenuItemSmallFour">
                                         <a href="/">Contact</a>
                                     </li>
                                     <li className="navmenuItemSmallFive">
-                                        <a href="/">Sign In</a>
+                                        <a href="/">Login</a>
                                     </li>
                                     <li className="navmenuItemSmallSix">
                                         <a href="/">Sign Up</a>
