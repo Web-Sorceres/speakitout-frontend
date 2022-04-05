@@ -117,6 +117,9 @@
             color: transparent;
             -webkit-background-clip: text;
             background-clip: text;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
         }
     }
     .landingNavSmallOverlay {
