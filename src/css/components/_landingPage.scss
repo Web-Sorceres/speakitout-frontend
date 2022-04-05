@@ -85,9 +85,9 @@
             border-radius: 72px;
             outline: none;
             border: none;
+            width: max-content;
             @include respond(medium) {
                 padding: 0.3rem 1.5rem;
-                width: max-content;
             }
         }
     }
