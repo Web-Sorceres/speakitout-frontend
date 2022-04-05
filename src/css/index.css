@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+@media screen and (max-width: 650px) {
+  * {
+    font-size: 85%;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -140,14 +146,14 @@ body {
   border-radius: 72px;
   outline: none;
   border: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 @media screen and (max-width: 1050px) {
   .landing-navbar ul button {
     padding: 0.3rem 1.5rem;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
   }
 }
 
@@ -157,12 +163,7 @@ body {
 
 @media screen and (max-width: 650px) {
   .landingNavSmall {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    display: block;
     padding: 8px 12px;
   }
 }
@@ -173,6 +174,27 @@ body {
   color: #E8B501;
   cursor: pointer;
   z-index: 10;
+}
+
+.landingNavSmall .landingNavSmallHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.landingNavSmall .landingNavSmallHead .logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  background: linear-gradient(90.57deg, #EEC800 3.34%, #F58925 77.65%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .landingNavSmall .landingNavSmallOverlay {
@@ -323,6 +345,12 @@ body {
   }
 }
 
+@media screen and (max-width: 650px) {
+  .landing-header::before {
+    display: none;
+  }
+}
+
 .landing-header .landing-header-left {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -340,6 +368,15 @@ body {
   gap: 1.5rem;
 }
 
+@media screen and (max-width: 650px) {
+  .landing-header .landing-header-left {
+    background-image: url("/public/assets/iPhone_X_MockUp_white-removebg-preview 1.png");
+    background-size: 50%;
+    background-position: center right;
+    background-repeat: no-repeat;
+  }
+}
+
 .landing-header h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -354,6 +391,10 @@ body {
   .landing-header .landing-header-left-desc {
     max-width: 80%;
   }
+}
+
+.landing-header .landing-header-left-desc p {
+  font-size: 1.2rem;
 }
 
 .landing-header .secracy {
@@ -377,6 +418,12 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+@media screen and (max-width: 650px) {
+  .landing-header .landing-header-right {
+    display: none;
+  }
 }
 
 .landing-header .landing-header-right img {
@@ -563,12 +610,27 @@ body {
 
 .landing-newsletter .landing-newsletter-heading {
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1re;
 }
 
 .landing-newsletter .landing-newsletter-heading h2 {
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 650px) {
+  .landing-newsletter .landing-newsletter-heading h2 {
+    font-size: 1.5rem;
+  }
 }
 
 .landing-newsletter .landing-newsletter-heading p {
@@ -590,6 +652,24 @@ body {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 650px) {
+  .landing-newsletter .landing-newsletter-form {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: none;
+  }
+}
+
 .landing-newsletter .landing-newsletter-form input {
   padding: 2ch;
   background-color: transparent;
@@ -599,6 +679,15 @@ body {
   -webkit-box-flex: 75%;
       -ms-flex: 75%;
           flex: 75%;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 650px) {
+  .landing-newsletter .landing-newsletter-form input {
+    width: 100%;
+    border-radius: inherit;
+    border: 1px solid #fff;
+  }
 }
 
 .landing-newsletter .landing-newsletter-form input::-webkit-input-placeholder {
@@ -624,6 +713,7 @@ body {
   outline: none;
   padding: 0.6rem 1.8rem;
   text-transform: uppercase;
+  font-size: 1rem;
 }
 
 .landing-about {
@@ -654,6 +744,10 @@ body {
   background-clip: text;
   text-transform: uppercase;
   text-align: center;
+}
+
+.landing-about p {
+  font-size: 1.2rem;
 }
 
 .landing-about .landing-about-container {
@@ -839,6 +933,7 @@ body {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+  text-align: center;
 }
 
 .team-card-wrapper .team-card-socials {
@@ -884,6 +979,16 @@ body {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 650px) {
+  .landing-footer-desc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem;
+  }
+}
+
 .landing-footer-desc h2 {
   font-size: 1.5rem;
   font-weight: 400;
@@ -903,6 +1008,13 @@ body {
 .landing-footer-desc .footer-desc-about p {
   margin-top: 1rem;
   max-width: 50%;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 650px) {
+  .landing-footer-desc .footer-desc-about p {
+    max-width: 100%;
+  }
 }
 
 .landing-footer-desc .footer-desc-right {
@@ -912,6 +1024,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   gap: 2rem;
 }
 
@@ -928,6 +1043,10 @@ body {
   gap: 10px;
 }
 
+.landing-footer-desc .footer-desc-right .footer-desc-quickLinks li {
+  font-size: 1.2rem;
+}
+
 .landing-footer-desc .footer-desc-right .footer-desc-followUs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -941,6 +1060,7 @@ body {
 
 .landing-footer-desc .footer-desc-right .footer-desc-followUs a {
   all: unset;
+  font-size: 1.2rem;
   display: block;
 }
 
@@ -965,9 +1085,21 @@ body {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 650px) {
+  .landing-footer-bottom {
+    padding: 0.3rem 1.5rem;
+  }
+}
+
 .landing-footer-bottom h2 {
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+@media screen and (max-width: 650px) {
+  .landing-footer-bottom .footer-bottom-subtitle {
+    display: none;
+  }
 }
 
 .landing-footer-bottom .footer-bottom-title {

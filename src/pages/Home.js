@@ -3,7 +3,7 @@ import LandingNavbar from '../components/LandingNavbar';
 import LandingFeatures from '../components/LandingFeatures';
 import LandingTeamCards from '../components/LandingTeamCards'
 import team from '../data/teaminfo';
-import LandingFooter from '../css/components/LandingFooter';
+import LandingFooter from '../components/LandingFooter';
 
 function Home(props) {
     return (
@@ -16,7 +16,7 @@ function Home(props) {
                         <h1 className="secracy">Secracy</h1>
                     </div>
                     <div className="landing-header-left-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quaerat iusto asperiores voluptas quo. Et, doloremque molestiae sunt maiores deserunt eius deleniti, earum debitis necessitatibus est numquam consequuntur sapiente! Dicta.
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quaerat iusto asperiores voluptas quo. Et, doloremque molestiae sunt maiores deserunt eius deleniti, earum debitis necessitatibus est numquam consequuntur sapiente! Dicta.</p>
                     </div>
                     <div className="landing-header-left-button">
                         <button>Log in</button>

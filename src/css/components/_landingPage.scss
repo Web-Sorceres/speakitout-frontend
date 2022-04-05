@@ -95,8 +95,7 @@
 .landingNavSmall {
     display: none;
     @include respond(small) {
-      display: flex;
-      justify-content: flex-end;
+        display: block;
       padding: 8px 12px;
     }
     .landingNavHam {
@@ -105,6 +104,20 @@
       color: #E8B501;
       cursor: pointer;
       z-index: 10;
+    }
+    .landingNavSmallHead {
+        display: flex;
+        justify-content: space-around;
+        .logo {
+            flex: 1;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            background: linear-gradient(90.57deg, #EEC800 3.34%, #F58925 77.65%);
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
     }
     .landingNavSmallOverlay {
       position: fixed;
@@ -173,10 +186,10 @@
     position: relative;
     margin: 0 auto;
     padding: 5rem 0;
+    overflow: hidden;
     @include respond(medium) {
         width: 90%;
     }
-    overflow: hidden;
     &::before {
         position: absolute;
         content: " ";
@@ -197,6 +210,9 @@
             border-radius: 50%;
             transform: rotate(-100deg);
         }
+        @include respond(small) {
+            display: none;
+        }
     }
     .landing-header-left {
         flex: 1;
@@ -204,6 +220,12 @@
         flex-direction: column;
         justify-content: center;
         gap: 1.5rem;
+        @include respond(small) {
+            background-image: url("/public/assets/iPhone_X_MockUp_white-removebg-preview\ 1.png");
+            background-size: 50%;
+            background-position: center right;
+            background-repeat: no-repeat;
+        }
     }
     h1 {
         font-size: 3rem;
@@ -214,6 +236,9 @@
         max-width: 70%;
         @include respond(medium) {
             max-width: 80%;
+        }
+        p {
+            font-size: 1.2rem;
         }
     }
     .secracy {
@@ -227,7 +252,9 @@
         display: flex;
         justify-content: center;
         align-items: flex-end;
-
+        @include respond(small) {
+            display: none;
+        }
         img {
             width: 60%;
             @include respond(medium) {
@@ -343,10 +370,17 @@
     gap: 2.5rem;
     .landing-newsletter-heading {
         color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 1re,;
         h2 {
             font-size: 2rem;
             text-transform: uppercase;
             text-align: center;
+            font-weight: 600;
+            @include respond(small) {
+                font-size: 1.5rem;
+            }
         }
         p {
             font-size: 1.2rem;
@@ -361,6 +395,14 @@
         padding: 0.2rem;
         display: flex;
         justify-content: space-between;
+        @include respond(small) {
+            width: 90%;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+            border: none;
+        }
         input {
             padding: 2ch;
             background-color: transparent;
@@ -368,6 +410,12 @@
             outline: none;
             color: #fff;
             flex: 75%;
+            font-size: 1rem;
+            @include respond(small) {
+                width: 100%;
+                border-radius: inherit;
+                border: 1px solid #fff;
+            }
             &::placeholder {
                 color: #fff;
             }
@@ -379,6 +427,7 @@
             outline: none;
             padding: 0.6rem 1.8rem;
             text-transform: uppercase;
+            font-size: 1rem;
         }
     }
 }
@@ -398,6 +447,9 @@
         background-clip: text;
         text-transform: uppercase;
         text-align: center;
+    }
+    p {
+        font-size: 1.2rem;
     }
     .landing-about-container {
         width: 80%;
@@ -507,6 +559,7 @@
             color: transparent;
             -webkit-background-clip: text;
             background-clip: text;
+            text-align: center;
         }
     }
     .team-card-socials {
@@ -536,6 +589,10 @@
     color: #fff;
     display: flex;
     justify-content: space-between;
+    @include respond(small) {
+        flex-direction: column;
+        gap: 2rem;
+    }
     h2 {
         font-size: 1.5rem;
         font-weight: 400;
@@ -548,11 +605,16 @@
         p {
             margin-top: 1rem;
             max-width: 50%;
+            font-size: 1.2rem;
+            @include respond(small) {
+                max-width: 100%;
+            }
         }
     }
     .footer-desc-right {
         flex: 1;
         display: flex;
+        justify-content: space-evenly;
         gap: 2rem;
         .footer-desc-quickLinks {
             ul {
@@ -562,6 +624,9 @@
                 flex-direction: column;
                 gap: 10px;
             }
+            li {
+                font-size: 1.2rem;
+            }
         }
         .footer-desc-followUs {
             display: flex;
@@ -569,6 +634,7 @@
             gap: 1rem;
             a {
                 all:  unset;
+                font-size: 1.2rem;
                 display: block;
             }
             .footer-social-links {
@@ -583,9 +649,17 @@
     padding: 0.3rem 3rem;
     display: flex;
     justify-content: space-between;
+    @include respond(small) {
+        padding: 0.3rem 1.5rem;
+    }
     h2 {
         font-size: 1.1rem;
         font-weight: 500;
+    }
+    .footer-bottom-subtitle {
+        @include respond(small) {
+            display: none;
+        }
     }
     .footer-bottom-title {
         color: #F58925;

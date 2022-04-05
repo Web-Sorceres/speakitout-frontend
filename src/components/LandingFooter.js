@@ -33,7 +33,7 @@ const LandingFooter = () => {
             </div>
             <div className="landing-footer-bottom">
                 <div className="footer-bottom-left">
-                    <h2><span className="footer-bottom-title">Speak It Out</span> is a part of web sorcerers company.</h2>
+                    <h2><span className="footer-bottom-title">Speak It Out</span><span className="footer-bottom-subtitle"> is a part of web sorcerers company.</span></h2>
                 </div>
                 <div className="footer-bottom-right">
                     <h2>&copy; {year} All Rights Reserved</h2>

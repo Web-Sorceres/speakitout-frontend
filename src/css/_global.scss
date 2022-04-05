@@ -1,7 +1,22 @@
+@mixin respond($breakpoint) {
+  @if($breakpoint == medium) {
+    @media screen and (max-width: 1050px) {
+      @content
+    }
+  }
+  @if ($breakpoint == small) {
+    @media screen and (max-width: 650px) {
+      @content
+    }
+  }
+}
 *{
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    @include respond(small) {
+      font-size: 85%;
+    }
   }
   body {
     margin: 0;

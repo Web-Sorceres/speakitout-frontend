@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -26,36 +26,41 @@ const LandingNavbar = () => {
                 </ul>
             </div>
             <div className="landingNavSmall">
-                        {hamMenu ? (
-                            <CloseIcon className="landingNavHam" onClick={handleHamMenu} />
-                        ) : (
-                            <MenuIcon className="landingNavHam" onClick={handleHamMenu} />
-                        )}
-                        {hamMenu && (
-                            <div className="landingNavSmallOverlay">
-                                <ul className="navMenuItemsSmall">
-                                    <li className="navmenuItemSmallOne">
-                                        <a href="/">Home</a>
-                                    </li>
-                                    <li className="navmenuItemSmallTwo">
-                                        <a href="/">Features</a>
-                                    </li>
-                                    <li className="navmenuItemSmallThree">
-                                        <a href="/">About</a>
-                                    </li>
-                                    <li className="navmenuItemSmallFour">
-                                        <a href="/">Contact</a>
-                                    </li>
-                                    <li className="navmenuItemSmallFive">
-                                        <a href="/">Login</a>
-                                    </li>
-                                    <li className="navmenuItemSmallSix">
-                                        <a href="/">Sign Up</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        )}
+                <div className="landingNavSmallHead">
+                    <div className="logo">
+                        Speak It Out
                     </div>
+                    {hamMenu ? (
+                        <CloseIcon className="landingNavHam" onClick={handleHamMenu} />
+                    ) : (
+                        <MenuIcon className="landingNavHam" onClick={handleHamMenu} />
+                    )}
+                </div>
+                {hamMenu && (
+                    <div className="landingNavSmallOverlay">
+                        <ul className="navMenuItemsSmall">
+                            <li className="navmenuItemSmallOne">
+                                <a href="/">Home</a>
+                            </li>
+                            <li className="navmenuItemSmallTwo">
+                                <a href="/">Features</a>
+                            </li>
+                            <li className="navmenuItemSmallThree">
+                                <a href="/">About</a>
+                            </li>
+                            <li className="navmenuItemSmallFour">
+                                <a href="/">Contact</a>
+                            </li>
+                            <li className="navmenuItemSmallFive">
+                                <a href="/">Login</a>
+                            </li>
+                            <li className="navmenuItemSmallSix">
+                                <a href="/">Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
+                )}
+            </div>
         </>
     )
 }
