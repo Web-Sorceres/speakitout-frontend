@@ -4,27 +4,34 @@ import LandingFeatures from '../components/LandingFeatures';
 import LandingTeamCards from '../components/LandingTeamCards'
 import team from '../data/teaminfo';
 import LandingFooter from '../components/LandingFooter';
+import Zoom from 'react-reveal/Zoom';
+import Bounce from "react-reveal/Bounce"
+import Tada from 'react-reveal/Tada';
 
 function Home(props) {
     return (
         <div>
             <LandingNavbar />
             <div className="landing-header">
-                <div className="landing-header-left">
-                    <div className="landing-header-left-heading">
-                        <h1>Confess With</h1>
-                        <h1 className="secracy">Secracy</h1>
+                <Zoom ssrFadeout>
+                    <div className="landing-header-left">
+                        <div className="landing-header-left-heading">
+                            <h1>Confess With</h1>
+                            <h1 className="secracy">Secracy</h1>
+                        </div>
+                        <div className="landing-header-left-desc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quaerat iusto asperiores voluptas quo. Et, doloremque molestiae sunt maiores deserunt eius deleniti, earum debitis necessitatibus est numquam consequuntur sapiente! Dicta.</p>
+                        </div>
+                        <div className="landing-header-left-button">
+                            <button>Log in</button>
+                        </div>
                     </div>
-                    <div className="landing-header-left-desc">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quaerat iusto asperiores voluptas quo. Et, doloremque molestiae sunt maiores deserunt eius deleniti, earum debitis necessitatibus est numquam consequuntur sapiente! Dicta.</p>
+                </Zoom>
+                <Bounce>
+                    <div className="landing-header-right">
+                        <img src="assets/iPhone_X_MockUp_white-removebg-preview 1.png" alt="" />
                     </div>
-                    <div className="landing-header-left-button">
-                        <button>Log in</button>
-                    </div>
-                </div>
-                <div className="landing-header-right">
-                    <img src="assets/iPhone_X_MockUp_white-removebg-preview 1.png" alt="" />
-                </div>
+                </Bounce>
             </div>
             <LandingFeatures />
             <div className="landing-about">
@@ -53,14 +60,16 @@ function Home(props) {
                 <h2 className='team-card-heading'>Our Team</h2>
                 <div className="team-card">
                     {team.map((item, index) =>
-                        <LandingTeamCards
-                            key={index + 1}
-                            name={item.name}
-                            role={item.role}
-                            fb={item.facebook}
-                            insta={item.instagram}
-                            github={item.github}
-                        />
+                        <Tada>
+                            <LandingTeamCards
+                                key={index + 1}
+                                name={item.name}
+                                role={item.role}
+                                fb={item.facebook}
+                                insta={item.instagram}
+                                github={item.github}
+                            />
+                        </Tada>
                     )}
                 </div>
             </div>
